@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Times New Roman", Times, serif;
+}
+
+@layer base {
+  html {
+    font-family: "Times New Roman", Times, serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#fcfdfa] text-[#1a2a1a] antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold uppercase tracking-wide;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .section-title {
+    @apply text-[24px] md:text-[32px] font-bold text-green-900 mb-4 relative inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute -bottom-2 left-0 w-16 h-1.5 bg-green-600 rounded-full;
+  }
+}
+
+.markdown-body h1 { @apply text-[18px] mb-4; }
+.markdown-body h2 { @apply text-[16px] mb-3; }
+.markdown-body h3 { @apply text-[14px] mb-2; }
+.markdown-body p { @apply text-[13px] mb-4 leading-relaxed; }
+.markdown-body ul { @apply list-disc pl-5 mb-4 text-[13px]; }
+.markdown-body li { @apply mb-1; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green-200 rounded-full hover:bg-green-300 transition-colors;
+}
+
