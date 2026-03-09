@@ -71,8 +71,13 @@ const Header = ({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: 
             onClick={() => setActiveTab('home')}
             whileHover={{ scale: 1.02 }}
           >
-            <div className="w-12 h-12 bg-green-600 rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:bg-green-700 transition-all duration-300 group-hover:rotate-6">
-              <Leaf size={28} />
+            <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-green-600/20 transition-all duration-300 group-hover:rotate-6 overflow-hidden border border-green-100">
+              <img 
+                src="image/logo.png" 
+                alt="TRẠM XANH Logo" 
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div className="ml-3">
               <h1 className="text-[18px] font-bold text-green-900 leading-none tracking-tighter">TRẠM XANH</h1>
@@ -148,8 +153,13 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
         <div className="md:col-span-2">
           <div className="flex items-center mb-8">
-            <div className="w-12 h-12 bg-green-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-green-600/20">
-              <Leaf size={28} />
+            <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-green-600/20 overflow-hidden border border-green-100">
+              <img 
+                src="https://storage.googleapis.com/aistudio-build-user-uploads-asia-east1/55prg67osy2tcxlyix56mx/2026-03-09/logo.png" 
+                alt="TRẠM XANH Logo" 
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <h2 className="text-[24px] font-bold tracking-tight">TRẠM XANH</h2>
           </div>
@@ -493,7 +503,7 @@ const ProductsPage = ({ onBuyNow }: { onBuyNow: (p: Product) => void }) => {
       usage: 'Lắc đều, uống lạnh. Dùng bữa sáng, bữa phụ.',
       storage: 'Ngăn mát 2–6°C. Dùng trong 24–48h.',
       ingredients: 'Hạt tự nhiên, nước lọc, đường thô, muối biển.',
-      price: { first: '30k', exchange: '20k' }
+      price: { first: '25-30k', exchange: '15-20k' }
     },
     { 
       name: 'Kombucha', 
@@ -504,7 +514,7 @@ const ProductsPage = ({ onBuyNow }: { onBuyNow: (p: Product) => void }) => {
       usage: 'Uống trực tiếp sau ăn. Người mới dùng 200-300ml/ngày.',
       storage: 'Luôn bảo quản lạnh 2–6°C. Không lắc mạnh.',
       ingredients: 'Trà đen/xanh, men SCOBY, đường mía, trái cây.',
-      price: { first: '40k', exchange: '30k' }
+      price: { first: '35-40k', exchange: '25-30k' }
     },
     { 
       name: 'Nước Detox', 
@@ -515,7 +525,7 @@ const ProductsPage = ({ onBuyNow }: { onBuyNow: (p: Product) => void }) => {
       usage: 'Lắc đều. Uống sáng hoặc giữa ngày.',
       storage: 'Ngăn mát. Dùng trong 24h.',
       ingredients: 'Nước lọc, hạt chia, trái cây tươi, thảo mộc.',
-      price: { first: '25k', exchange: '20k' }
+      price: { first: '20-25k', exchange: '15-20k' }
     },
     { 
       name: 'Sữa Chua Uống', 
@@ -526,7 +536,7 @@ const ProductsPage = ({ onBuyNow }: { onBuyNow: (p: Product) => void }) => {
       usage: 'Lắc đều, uống lạnh sau bữa ăn.',
       storage: 'Nhiệt độ 2–6°C. Dùng trong 24h. Không đông đá.',
       ingredients: 'Sữa tươi/hạt, men sữa chua, trái cây xay.',
-      price: { first: '35k', exchange: '25k' }
+      price: { first: '30-35k', exchange: '20-25k' }
     }
   ];
 
