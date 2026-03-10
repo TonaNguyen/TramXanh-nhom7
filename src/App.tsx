@@ -73,7 +73,7 @@ const Header = ({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: 
           >
             <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-green-600/20 transition-all duration-300 group-hover:rotate-6 overflow-hidden border border-green-100">
               <img 
-                src="image/logo.png" 
+                src="public/logo.png" 
                 alt="TRẠM XANH Logo" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -155,7 +155,7 @@ const Footer = () => (
           <div className="flex items-center mb-8">
             <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-green-600/20 overflow-hidden border border-green-100">
               <img 
-                src="image/logo.png" 
+                src="public/logo.png" 
                 alt="TRẠM XANH Logo" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
