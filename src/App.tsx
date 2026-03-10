@@ -569,8 +569,8 @@ const ProductsPage = ({ onBuyNow }: { onBuyNow: (p: Product) => void }) => {
 
       {/* Search and Filter Bar */}
       <div className="sticky top-24 z-40 bg-[#fcfdfa]/80 backdrop-blur-xl py-6 border-y border-gray-100">
-        <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
-          <div className="flex items-center w-full lg:w-auto overflow-x-auto pb-2 lg:pb-0 no-scrollbar">
+        <div className="flex flex-col lg:flex-row gap-6 items-center justify-between w-full">
+          <div className="flex items-center w-full lg:w-auto overflow-x-auto pb-2 lg:pb-0 no-scrollbar flex-1">
             <div className="flex gap-3 px-1">
               {['Tất cả', ...categories.map(c => c.name)].map((cat) => (
                 <button
@@ -587,7 +587,7 @@ const ProductsPage = ({ onBuyNow }: { onBuyNow: (p: Product) => void }) => {
               ))}
             </div>
           </div>
-          <div className="relative w-full lg:w-96">
+          <div className="relative w-full lg:w-80 flex-shrink-0">
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-300" size={20} />
             <input 
               type="text" 
