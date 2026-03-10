@@ -224,7 +224,7 @@ const Header = ({ activeTab, setActiveTab }: { activeTab: string, setActiveTab: 
                       key={item.id}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.1 }}
+                      transition={{ delay: i * 0.1 }} 
                       onClick={() => {
                         setActiveTab(item.id);
                         setIsMenuOpen(false);
@@ -597,7 +597,9 @@ const HomePage = () => {
               <div className="w-20 h-20 bg-green-500 rounded-[28px] flex items-center justify-center text-white mb-12 shadow-2xl shadow-green-500/30 group-hover:-rotate-12 transition-transform duration-500">
                 <Globe size={40} />
               </div>
-              <h2 className="text-[32px] font-bold text-white mb-8 tracking-tight">Tầm Nhìn</h2>
+           <h2 className="text-[32px] font-bold text-white mb-8 tracking-tight uppercase">
+Tầm nhìn
+</h2>
               <p className="text-[18px] leading-relaxed text-green-100/80">
                 Trạm Xanh hướng tới trở thành thương hiệu thực phẩm và đồ uống healthy được tin dùng hàng đầu tại Việt Nam, tiên phong trong việc kết hợp đa dạng sản phẩm, đổi mới sáng tạo và phát triển bền vững cho xã hội Việt.
               </p>
@@ -758,7 +760,7 @@ const ProductsPage = ({ onBuyNow }: { onBuyNow: (p: Product) => void }) => {
                         whileHover={{ y: -10, scale: 1.02 }}
                         className="group bg-white rounded-[45px] border border-gray-100 shadow-sm hover:shadow-2xl hover:border-green-100 transition-all duration-500 overflow-hidden"
                       >
-                        <div className="relative h-64 overflow-hidden">
+                        <div className="relative p-10 rounded-[32px]">
                           <img 
                             src={product.image} 
                             alt={product.name} 
