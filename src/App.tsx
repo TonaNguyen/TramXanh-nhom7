@@ -571,21 +571,34 @@ const ProductsPage = ({ onBuyNow }: { onBuyNow: (p: Product) => void }) => {
       <div className="sticky top-24 z-40 bg-[#fcfdfa]/80 backdrop-blur-xl py-6 border-y border-gray-100">
         <div className="flex flex-col lg:flex-row gap-6 items-center justify-between w-full">
           <div className="flex items-center w-full lg:w-auto overflow-x-auto pb-2 lg:pb-0 no-scrollbar flex-1">
-            <div className="flex gap-3 px-1">
-              {['Tất cả', ...categories.map(c => c.name)].map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-6 py-3 rounded-2xl text-[13px] font-bold transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
-                    selectedCategory === cat 
-                      ? 'bg-green-600 text-white shadow-lg shadow-green-600/20' 
-                      : 'bg-white text-gray-500 border border-gray-100 hover:border-green-200 hover:text-green-600'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+            {/* Category Navigation */}
+<div className="w-full overflow-x-auto pb-2">
+  <div className="flex gap-3 min-w-max">
+
+    {['Tất cả', ...categories.map(c => c.name)].map((cat) => {
+      const isActive = selectedCategory === cat
+
+      return (
+        <button
+          key={cat}
+          onClick={() => setSelectedCategory(cat)}
+          className={`
+            px-6 py-3 rounded-full text-[13px] font-semibold
+            transition-all duration-300 whitespace-nowrap
+            border
+            ${isActive
+              ? "bg-green-600 text-white border-green-600 shadow-md"
+              : "bg-white text-gray-700 border-gray-200 hover:bg-green-50 hover:border-green-400"
+            }
+          `}
+        >
+          {cat}
+        </button>
+      )
+    })}
+
+  </div>
+</div>
           </div>
           <div className="relative w-full lg:w-80 flex-shrink-0">
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-300" size={20} />
