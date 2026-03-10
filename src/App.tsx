@@ -155,7 +155,7 @@ const Footer = () => (
           <div className="flex items-center mb-8">
             <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center mr-4 shadow-lg shadow-green-600/20 overflow-hidden border border-green-100">
               <img 
-                src="https://storage.googleapis.com/aistudio-build-user-uploads-asia-east1/55prg67osy2tcxlyix56mx/2026-03-09/logo.png" 
+                src="image/logo.png" 
                 alt="TRẠM XANH Logo" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
